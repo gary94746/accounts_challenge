@@ -22,41 +22,26 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 ## Installation
 
 ```bash
-$ npm install
+$ cp .env.sample .env
+$ yarn install
+$ npx prisma generate
+$ npx prisma migrate dev --name init
+$ npx prisma db seed
+$ yarn start
 ```
 
-## Running the app
+## Docs
 
-```bash
-# development
-$ npm run start
+api docs are in `localhost:{host}/docs`
 
-# watch mode
-$ npm run start:dev
+## TODO
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+- [ ] Improve error handling, like unique emails
+- [ ] Do unit and e2e testing
+- [ ] Complete docs
 
 ## Support
 
